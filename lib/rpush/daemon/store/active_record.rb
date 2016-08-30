@@ -23,7 +23,7 @@ module Rpush
         end
 
         def all_apps
-          Rpush::Client::ActiveRecord::App.all
+          Rpush::Client::ActiveRecord::App.where(enabled: true)
         end
 
         def deliverable_notifications(limit)
